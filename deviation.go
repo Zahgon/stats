@@ -1,57 +1,39 @@
 package stats
 
-import "math"
-
 // MedianAbsoluteDeviation finds the median of the absolute deviations from the dataset median
 func MedianAbsoluteDeviation(input Float64Data) (mad float64, err error) {
-	return MedianAbsoluteDeviationPopulation(input)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // MedianAbsoluteDeviationPopulation finds the median of the absolute deviations from the population median
 func MedianAbsoluteDeviationPopulation(input Float64Data) (mad float64, err error) {
-	if input.Len() == 0 {
-		return math.NaN(), EmptyInputErr
-	}
-
-	i := copyslice(input)
-	m, _ := Median(i)
-
-	for key, value := range i {
-		i[key] = math.Abs(value - m)
-	}
-
-	return Median(i)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // StandardDeviation the amount of variation in the dataset
 func StandardDeviation(input Float64Data) (sdev float64, err error) {
-	return StandardDeviationPopulation(input)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // StandardDeviationPopulation finds the amount of variation from the population
 func StandardDeviationPopulation(input Float64Data) (sdev float64, err error) {
-
-	if input.Len() == 0 {
-		return math.NaN(), EmptyInputErr
-	}
-
-	// Get the population variance
-	vp, _ := PopulationVariance(input)
-
-	// Return the population standard deviation
-	return math.Sqrt(vp), nil
+	_ = "STUB: not implemented"
+	return 0, nil
 }
+
+// Get the population variance
+
+// Return the population standard deviation
 
 // StandardDeviationSample finds the amount of variation from a sample
 func StandardDeviationSample(input Float64Data) (sdev float64, err error) {
-
-	if input.Len() == 0 {
-		return math.NaN(), EmptyInputErr
-	}
-
-	// Get the sample variance
-	vs, _ := SampleVariance(input)
-
-	// Return the sample standard deviation
-	return math.Sqrt(vs), nil
+	_ = "STUB: not implemented"
+	return 0, nil
 }
+
+// Get the sample variance
+
+// Return the sample standard deviation

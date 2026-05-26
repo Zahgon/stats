@@ -4,17 +4,17 @@ type statsError struct {
 	err string
 }
 
-func (s statsError) Error() string {
-	return s.err
-}
+func (s statsError) Error() string { _ = "STUB: not implemented"; return "" }
 
 func (s statsError) String() string {
-	return s.err
+	_ = "STUB: not implemented"
+
+	// These are the package-wide error values.
+	// All error identification should use these values.
+	// https://github.com/golang/go/wiki/Errors#naming
+	return ""
 }
 
-// These are the package-wide error values.
-// All error identification should use these values.
-// https://github.com/golang/go/wiki/Errors#naming
 var (
 	// ErrEmptyInput Input must not be empty
 	ErrEmptyInput = statsError{"Input must not be empty."}
